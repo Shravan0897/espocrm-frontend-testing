@@ -7,6 +7,7 @@ const config = {
     baseURL: process.env.BASE_URL || 'https://demo.us.espocrm.com/',
     headless: true,
     trace: 'on-first-retry',
+    browserName: "chromium",
   },
   retries: 1,
 };

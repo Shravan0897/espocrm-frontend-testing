@@ -66,7 +66,7 @@ npm run test:e2e
 > Note: The public demo occasionally changes. The test uses robust selectors (`getByRole`) and waits, but if the Leads list is temporarily empty the “open a lead” step may not find an item.
 
 ## Unit test
-The unit test verifies the `LeadDetails` component shows core fields and that email/phone/website are rendered as proper links. The component ships with an exported `lead` object and defaults to it so the test has zero setup.
+The tests confirm the Hello component renders “Hello, {name}!” when a name is provided and falls back to “world” when it isn’t. An aria-labeled paragraph makes querying trivial, so the tests are zero-setup.
 
 ## CI/CD
 GitHub Actions workflow:
