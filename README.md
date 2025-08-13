@@ -75,11 +75,6 @@ GitHub Actions workflow:
 - Runs Jest (unit) then Playwright (e2e).
 - Uploads Playwright HTML report if E2E fails.
 
-## Tweaks you might want
-- Add `projects` in `playwright.config.js` to run Chromium/Firefox/WebKit matrix.
-- Record traces/videos for all tests by setting `trace: 'on'`.
-- Stabilize the E2E by seeding data (if you control the backend) or by adding a fallback that creates a lead via UI/API when the list is empty.
-
 ---
 
 ### Credits / Notes
