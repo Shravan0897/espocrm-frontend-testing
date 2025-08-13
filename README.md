@@ -15,13 +15,13 @@ This repo contains:
 ```
 espocrm-frontend-testing/
 ├─ src/
-│  └─ Hello.jsx                # Simple demo component; exports `Hello` and defaults to it
+│  └─ Hello.jsx                   # Simple demo component; exports `Hello` and defaults to it
 ├─ unit/
-│  └─ Hello.test.jsx           # Unit test with React Testing Library
+│  └─ Hello.test.jsx              # Unit test with React Testing Library
 ├─ e2e/ 
 │  └─ tests/
-│     └─ leads.spec.js            # E2E: login (if needed) → Leads list → open a lead
-├─ .github/workflows/tests.yml       # CI for unit + e2e
+│     └─ leads.spec.js            # E2E: login → Leads list → open a lead
+├─ .github/workflows/tests.yml    # CI for unit + e2e
 ├─ package.json
 ├─ jest.config.js
 ├─ jest.setup.js
