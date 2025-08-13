@@ -33,7 +33,7 @@ espocrm-frontend-testing/
 ### Naming conventions
 - **E2E**: `*.spec.js` under `e2e/tests/`.
 - **Unit**: `*.test.jsx` under `unit/`.
-- **React components**: `PascalCase.jsx` (e.g., `LeadDetails.jsx`).
+- **React components**: `PascalCase.jsx` (e.g., `Hello.jsx`).
 
 ## Running locally
 
