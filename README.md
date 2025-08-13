@@ -58,10 +58,11 @@ npm run test:e2e
   ```
 
 ## E2E test flow (kept short)
-1. Navigate to `#Lead/list` (EspoCRM uses hash routing for entity lists).
+1. Go to base URL.
 2. If a login form appears on the **US demo**, it lets you proceed **without credentials**—the test clicks the submit button if present.
-3. Assert the **Leads** list is visible.
-4. Click the first lead link (URLs look like `#Lead/view/{id}`) and assert the detail view loads.
+3. Navigate to `#Lead/list` (EspoCRM uses hash routing for entity lists).
+4. Assert the **Leads** list is visible.
+5. Click the first lead link (URLs look like `#Lead/view/{id}`) and assert the detail view loads.
 
 > Note: The public demo occasionally changes. The test uses robust selectors (`getByRole`) and waits, but if the Leads list is temporarily empty the “open a lead” step may not find an item.
 
