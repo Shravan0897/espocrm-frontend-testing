@@ -15,7 +15,7 @@ This repo contains:
 ```
 espocrm-frontend-testing/
 ├─ src/
-│  └─ Hello.jsx                # Simple demo component; exports `lead` and defaults to it
+│  └─ Hello.jsx                # Simple demo component; exports `Hello` and defaults to it
 ├─ unit/
 │  └─ Hello.test.jsx           # Unit test with React Testing Library
 ├─ e2e/ 
