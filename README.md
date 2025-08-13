@@ -1,5 +1,5 @@
 
-# TASK 1 – Frontend Testing (JavaScript + Playwright)
+# Frontend Testing (JavaScript + Playwright)
 
 This repo contains:
 - **Playwright E2E** test: log in to the demo, view the **Leads** list, open a lead’s details.
