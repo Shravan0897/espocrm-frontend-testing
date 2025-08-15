@@ -6,7 +6,7 @@ test('Verify Login, Go to Leads list, Open the first lead', async ({ page, baseU
   // Click on Login button
   await page.locator('#btn-login').click()
   // Go to leads list page
-  await page.goto('/#Lead/list');
+  await page.getByTitle("Leads").click()
   // Assert we’re on the right route
   await expect(page).toHaveURL(/Lead/);
   // Assert the Leads list UI is visible (header)
