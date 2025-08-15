@@ -1,17 +1,28 @@
 const { test, expect } = require('@playwright/test');
 const { HomePage } = require('../pages/HomePage');
-const { LeadsPage } = require('../pages/LeadsPage')
+const { NavBar } = require('../pages/NavBar');
+const { LeadsPage } = require('../pages/LeadsPage');
 
 test('Verify Login, Go to Leads list, Open the first lead', async ({ page, baseURL }) => {
-  // Go to the base url 
-  await page.goto((baseURL), { waitUntil: 'domcontentloaded' });
   const home = new HomePage(page);
+  const nav = new NavBar(page);
   const leads = new LeadsPage(page);
 
-  await home.clickLogin();
+  // Go to base URL
+  await page.goto(baseURL, { waitUntil: 'domcontentloaded' });
 
-  await leads.open();
-  await leads.assertOnList(expect);
-  await leads.assertListHeaderVisible(expect);
-  await leads.openFirstLead();
+  // Click on Login button
+  await home.loginButton.click();
+
+  // Go to leads list page
+  await nav.leadsLink.click();
+
+  // Assert we’re on the right route
+  await expect(page).toHaveURL(/Lead/);
+
+  // Assert the Leads list UI is visible (header)
+  await expect(leads.refreshHeader).toBeVisible();
+
+  // Click on the first lead
+  await leads.firstLeadLink.click();
 });

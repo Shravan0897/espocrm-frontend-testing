@@ -8,20 +8,23 @@ This repo contains:
 ## Why Playwright? (short and honest)
 - **Web‑first, batteries included**: cross‑browser (Chromium/WebKit/Firefox), auto‑waits for UI to be ready, handy trace viewer.
 - **Fast & CI‑friendly**: one command installs browsers and runs headless on GitHub Actions.
-- **Great selectors**: `getByRole`/`getByText` for readable, resilient tests.
+- **Great selectors**: `getByRole`/`getByText`/`getByTitle` for readable, resilient tests.
 
 ## Project Structure
 
 ```
-espocrm-frontend-testing/
 ├─ src/
-│  └─ Hello.jsx                   # Simple demo component; exports `Hello` and defaults to it
+│  └─ Hello.jsx                    # Simple demo component; exports `Hello` and defaults to it
 ├─ unit/
-│  └─ Hello.test.jsx              # Unit test with React Testing Library
-├─ e2e/ 
-│  └─ tests/
-│     └─ leads.spec.js            # E2E: login → Leads list → open a lead
-├─ .github/workflows/tests.yml    # CI for unit + e2e
+│  └─ Hello.test.jsx               # Unit test with React Testing Library
+├─ e2e/
+│  ├─ pages/                       # POM: locators only (no logic)
+│  │  ├─ HomePage.js               # e.g., loginButton, etc.
+│  │  ├─ NavBar.js                 # e.g., leadsLink, menu items
+│  │  └─ LeadsPage.js              # e.g., refreshHeader, firstLeadLink
+│  └─ tests/                       # Actions + assertions
+│     └─ leads.spec.js             # E2E: login → Leads list → open a lead
+├─ .github/workflows/tests.yml     # CI for unit + e2e
 ├─ package.json
 ├─ jest.config.js
 ├─ jest.setup.js
@@ -52,7 +55,7 @@ npm run test:unit
 npm run test:e2e
 ```
 
-- Default E2E base URL: `https://demo.us.espocrm.com/`.
+- Default E2E base URL: `https://demo.us.espocrm.com/`
 - Override with env var if needed:
   ```bash
   BASE_URL=https://demo.us.espocrm.com/ npm run test:e2e

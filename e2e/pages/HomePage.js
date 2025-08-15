@@ -1,12 +1,7 @@
 class HomePage {
-    constructor(page, baseURL) {
+    constructor(page) {
         this.page = page;
-        // Locators
         this.loginButton = page.locator('#btn-login');
-    }
-
-    async clickLogin() {
-        await this.loginButton.click();
     }
 }
 
