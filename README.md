@@ -8,7 +8,7 @@ This repo contains:
 ## Why Playwright? (short and honest)
 - **Web‑first, batteries included**: cross‑browser (Chromium/WebKit/Firefox), auto‑waits for UI to be ready, handy trace viewer.
 - **Fast & CI‑friendly**: one command installs browsers and runs headless on GitHub Actions.
-- **Great selectors**: `getByRole`/`getByText`/`getByTitle` for readable, resilient tests.
+- **Great selectors**: `getByRole`/`getByText`/`getByTitle`/`locator` for readable, resilient tests.
 
 ## Project Structure
 
