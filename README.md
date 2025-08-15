@@ -68,7 +68,6 @@ npm run test:e2e
 4. Assert the **Leads** list is visible.
 5. Click the first lead link (URLs look like `#Lead/view/{id}`) and assert the detail view loads.
 
-> Note: The public demo occasionally changes. The test uses robust selectors (`getByRole`) and waits, but if the Leads list is temporarily empty the “open a lead” step may not find an item.
 
 ## Unit test
 The tests confirm the Hello component renders “Hello, {name}!” when a name is provided and falls back to “world” when it isn’t. An aria-labeled paragraph makes querying trivial, so the tests are zero-setup.
