@@ -28,6 +28,7 @@ espocrm-frontend-testing/
 ├─ babel.config.js
 ├─ playwright.config.js
 └─ README.md
+└─ .gitignore
 ```
 
 ### Naming conventions
