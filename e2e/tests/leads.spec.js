@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { NavBar } = require('../pages/NavBar');
-const { LeadsPage } = require('../pages/LeadsPage');
+import { HomePage } from '../pages/Homepage';
+import { NavBar } from '../pages/Navbar';
+import { LeadsPage } from '../pages/LeadsPage';
 
 test('Verify Login, Go to Leads list, Open the first lead', async ({ page, baseURL }) => {
   const home = new HomePage(page);
